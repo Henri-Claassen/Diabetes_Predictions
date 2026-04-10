@@ -1,2 +1,23 @@
 # MLG382-Guided-Project
-This project works on a dataset called Diabetes_and_Lifestyle_Dataset and it clusters groups and predicts patient risk classes
+
+
+## 📂Project structure 
+|________data
+|	 |______train.csv
+|	 |______test.csv
+|
+|________src
+|	 |______prepare_data.py
+|	 |______preprocess_data.py
+|	 |______train_models.py
+|	 |______web_app.py
+|
+|________artifacts
+|	 |______model_1.pkl
+|	 |______model_2.pkl
+|	 |______feature_importance.csv
+|	 |______predictions.csv
+|
+|________notebooks
+|	 |______modeling.ipynb
+|	 |______web_application.ipynb
