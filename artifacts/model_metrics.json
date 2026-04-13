@@ -1,0 +1,164 @@
+{
+  "decision_tree": {
+    "best_params": {
+      "criterion": "gini",
+      "max_depth": null,
+      "min_samples_leaf": 10,
+      "min_samples_split": 2
+    },
+    "cv_f1_weighted": 0.8985152624558426,
+    "accuracy": 0.8892600205549845,
+    "precision_weighted": 0.9119747377950774,
+    "recall_weighted": 0.8892600205549845,
+    "f1_weighted": 0.8967380958514958,
+    "confusion_matrix": [
+      [
+        5,
+        6,
+        22,
+        1,
+        19
+      ],
+      [
+        33,
+        1495,
+        0,
+        18,
+        2
+      ],
+      [
+        80,
+        0,
+        5840,
+        42,
+        241
+      ],
+      [
+        1,
+        4,
+        12,
+        0,
+        6
+      ],
+      [
+        122,
+        265,
+        1215,
+        66,
+        9965
+      ]
+    ]
+  },
+  "random_forest": {
+    "best_params": {
+      "max_depth": 20,
+      "max_features": "sqrt",
+      "min_samples_split": 10,
+      "n_estimators": 400
+    },
+    "cv_f1_weighted": 0.9162484736312256,
+    "accuracy": 0.9163926002055498,
+    "precision_weighted": 0.9264058979001788,
+    "recall_weighted": 0.9163926002055498,
+    "f1_weighted": 0.9154600855514168,
+    "confusion_matrix": [
+      [
+        0,
+        8,
+        24,
+        0,
+        21
+      ],
+      [
+        0,
+        1548,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        6203,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        14,
+        0,
+        5
+      ],
+      [
+        0,
+        269,
+        1282,
+        0,
+        10082
+      ]
+    ]
+  },
+  "xgboost": {
+    "best_params": {
+      "learning_rate": 0.05,
+      "max_depth": 4,
+      "n_estimators": 200,
+      "subsample": 1.0
+    },
+    "cv_f1_weighted": 0.5751526667282731,
+    "accuracy": 0.8009763617677287,
+    "precision_weighted": 0.9252053345433743,
+    "recall_weighted": 0.8009763617677287,
+    "f1_weighted": 0.8500095722275517,
+    "confusion_matrix": [
+      [
+        25,
+        7,
+        14,
+        1,
+        6
+      ],
+      [
+        11,
+        1536,
+        0,
+        1,
+        0
+      ],
+      [
+        556,
+        20,
+        5429,
+        198,
+        0
+      ],
+      [
+        3,
+        4,
+        11,
+        2,
+        3
+      ],
+      [
+        1198,
+        269,
+        1165,
+        406,
+        8595
+      ]
+    ]
+  },
+  "kmeans": {
+    "k": 3,
+    "silhouette_train": 0.056625876618707695,
+    "silhouette_test": 0.05723244269692832,
+    "train_cluster_sizes": {
+      "0": 22961,
+      "1": 29436,
+      "2": 25440
+    },
+    "inertia": 1937392.8168943129
+  },
+  "best_classifier": "random_forest"
+}
