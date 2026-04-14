@@ -158,7 +158,7 @@
       "1": 29436,
       "2": 25440
     },
-    "inertia": 1937392.8168943129
+    "inertia": 1937392.8168943112
   },
   "best_classifier": "random_forest"
 }
