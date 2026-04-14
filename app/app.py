@@ -6,7 +6,8 @@ import pandas as pd, joblib, numpy as np, os, base64
 
 # --- LOAD MODELS ---
 # We updated the paths to look in '../artifacts/' instead of '../models/'
-target_le = joblib.load('../artifacts/label_encoder.pkl') 
+_base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+target_le = joblib.load(os.path.join(_base, 'artifacts', 'label_encoder.pkl'))
 
 # TODO: You need to find these two files from your team and put them in the artifacts folder!
 # feature_cols = joblib.load('../artifacts/feature_cols.pkl') 
