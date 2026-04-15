@@ -130,7 +130,8 @@ python src/SHAP_analysis.py
 ```
 
 All outputs (models, metrics, plots) will be saved to the `artifacts/` directory.
-
+If you want to see graphs about the models and explore the data run the notebooks notebooks/
+EDA can be run whenever but run modeling and shap_analysis after running the pipeline scripts
 ---
 
 ## Dependencies
