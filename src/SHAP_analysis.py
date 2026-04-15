@@ -148,7 +148,13 @@ def get_cluster_explainer(kmeans_model, X_train_scaled, X_test_scaled):
     rf_proxy.fit(X_train_scaled, cluster_labels_train)
 
     explainer = shap.TreeExplainer(rf_proxy)
-    shap_values = explainer.shap_values(X_test_scaled)
+    raw_shap = explainer.shap_values(X_test_scaled)
+
+    # Normalise to list of 2D arrays (one per cluster) — same as main RF section
+    if isinstance(raw_shap, np.ndarray) and raw_shap.ndim == 3:
+        shap_values = [raw_shap[:, :, i] for i in range(raw_shap.shape[2])]
+    else:
+        shap_values = raw_shap
 
     return explainer, shap_values, rf_proxy
 
