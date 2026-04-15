@@ -949,7 +949,7 @@ def predict_diabetes(n_clicks, age, gender, ethnicity, education, family,
             prob = prediction_proba[i] * 100
             if prob > 0:
                 probabilities_html.append(html.Div([
-                    html.Div([html.Span(cls), html.Span(f"{prob:.1f}%")], className="d-flex justify-content-between"),
+                    html.Div([html.Span(cls), html.Span(f"{prob:.1f}%")], style={"display": "flex", "justifyContent": "space-between", "marginBottom": "4px"}),
                     html.Div([html.Div(style={"width": f"{prob}%", "background": class_colors.get(cls, "#667eea"), 
                                            "height": "100%", "borderRadius": "4px"})], className="probability-bar")
                 ], className="mb-2"))
