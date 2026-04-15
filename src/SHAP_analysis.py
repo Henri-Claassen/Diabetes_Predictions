@@ -107,7 +107,7 @@ def plot_beeswarm(shap_values_class, X_sample, class_name, save_path=None, max_d
 # 6. Waterfall plot — single patient explanation
 # ---------------------------------------------------------------------------
 def plot_waterfall(explainer, shap_values, X_sample, patient_index,
-                   predicted_class_idx, class_names, save_path=None):
+                   predicted_class_idx, class_names, save_path=None, true_class_name=None):
     """
     Waterfall plot explaining one patient's prediction.
     Returns the predicted class name.
@@ -120,9 +120,15 @@ def plot_waterfall(explainer, shap_values, X_sample, patient_index,
             base_values=explainer.expected_value[predicted_class_idx],
             data=X_sample.iloc[patient_index],
             feature_names=X_sample.columns.tolist()
-        )
+        ),
+        show=False
     )
-    plt.title(f"Prediction explanation — {predicted_class_name}", fontsize=12)
+
+    if true_class_name and true_class_name != predicted_class_name:
+        title = f"True: {true_class_name}  →  Predicted: {predicted_class_name}  [MISCLASSIFIED]"
+    else:
+        title = f"Prediction explanation — {predicted_class_name}"
+    plt.gcf().suptitle(title, fontsize=12, y=1.02)
     plt.tight_layout()
 
     if save_path:
