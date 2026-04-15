@@ -51,16 +51,16 @@
   },
   "random_forest": {
     "best_params": {
-      "max_depth": 20,
+      "max_depth": 15,
       "max_features": "sqrt",
-      "min_samples_split": 10,
-      "n_estimators": 400
+      "min_samples_split": 20,
+      "n_estimators": 100
     },
-    "cv_f1_weighted": 0.9162484736312256,
-    "accuracy": 0.9163926002055498,
-    "precision_weighted": 0.9264058979001788,
-    "recall_weighted": 0.9163926002055498,
-    "f1_weighted": 0.9154600855514168,
+    "cv_f1_weighted": 0.9161327922381716,
+    "accuracy": 0.9159301130524152,
+    "precision_weighted": 0.9261253329894397,
+    "recall_weighted": 0.9159301130524152,
+    "f1_weighted": 0.9150267432947985,
     "confusion_matrix": [
       [
         0,
@@ -91,11 +91,11 @@
         5
       ],
       [
-        0,
+        1,
         269,
-        1282,
+        1290,
         0,
-        10082
+        10073
       ]
     ]
   },

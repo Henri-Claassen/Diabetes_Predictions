@@ -168,10 +168,10 @@ def train_decision_tree(X_train, y_train):
 # ---------------------------------------------------------------------------
 def train_random_forest(X_train, y_train):
     param_grid = {
-        "n_estimators": [200, 400],
-        "max_depth": [10, 20, None],
-        "min_samples_split": [2, 10],
-        "max_features": ["sqrt"],
+        "n_estimators": [100, 150],
+        "max_depth": [10, 15],
+        "min_samples_split": [10, 20],
+        "max_features": ["sqrt", "log2"],
     }
     base = RandomForestClassifier(
         class_weight="balanced",
