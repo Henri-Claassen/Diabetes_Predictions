@@ -605,7 +605,6 @@ def create_prediction_tab():
                         html.Div([
                             html.Label("Gender", className="form-label"),
                             dcc.Dropdown(id="input-gender", options=[
-                                {'label': 'Select gender', 'value': ''},
                                 {'label': 'Male', 'value': 'Male'},
                                 {'label': 'Female', 'value': 'Female'},
                                 {'label': 'Other', 'value': 'Other'}
@@ -616,10 +615,9 @@ def create_prediction_tab():
                         html.Div([
                             html.Label("Race", className="form-label"),
                             dcc.Dropdown(id="input-ethnicity", options=[
-                                {'label': 'Select race', 'value': ''},
                                 {'label': 'Asian', 'value': 'Asian'},
-                                {'label': 'Black or African American', 'value': 'Black'},
-                                {'label': 'Hispanic or Latino', 'value': 'Hispanic'},
+                                {'label': 'Black', 'value': 'Black'},
+                                {'label': 'Hispanic', 'value': 'Hispanic'},
                                 {'label': 'White', 'value': 'White'},
                                 {'label': 'Other', 'value': 'Other'}
                             ], placeholder="Select race", className="form-select", clearable=False)
@@ -627,9 +625,8 @@ def create_prediction_tab():
                         html.Div([
                             html.Label("Education Level", className="form-label"),
                             dcc.Dropdown(id="input-education", options=[
-                                {'label': 'Select education', 'value': ''},
                                 {'label': 'Informal', 'value': 'No formal'},
-                                {'label': 'Highschool', 'value': 'Highschool'},
+                                {'label': 'High School', 'value': 'Highschool'},
                                 {'label': 'Graduate', 'value': 'Graduate'},
                                 {'label': 'Post Graduate', 'value': 'Postgraduate'}
                             ], placeholder="Select education", className="form-select", clearable=False)
@@ -644,7 +641,6 @@ def create_prediction_tab():
                         html.Div([
                             html.Label("Family History of Diabetes", className="form-label"),
                             dcc.Dropdown(id="input-family", options=[
-                                {'label': 'Select Yes/No', 'value': ''},
                                 {'label': 'Yes', 'value': 'Yes'},
                                 {'label': 'No', 'value': 'No'}
                             ], placeholder="Select Yes/No", className="form-select", clearable=False)
@@ -652,7 +648,6 @@ def create_prediction_tab():
                         html.Div([
                             html.Label("Hypertension History", className="form-label"),
                             dcc.Dropdown(id="input-hypertension", options=[
-                                {'label': 'Select Yes/No', 'value': ''},
                                 {'label': 'Yes', 'value': 'Yes'},
                                 {'label': 'No', 'value': 'No'}
                             ], placeholder="Select Yes/No", className="form-select", clearable=False)
@@ -662,7 +657,6 @@ def create_prediction_tab():
                         html.Div([
                             html.Label("Smoking Status", className="form-label"),
                             dcc.Dropdown(id="input-smoking", options=[
-                                {'label': 'Select status', 'value': ''},
                                 {'label': 'Never', 'value': 'Never'},
                                 {'label': 'Former', 'value': 'Former'},
                                 {'label': 'Current', 'value': 'Current'}
@@ -671,7 +665,6 @@ def create_prediction_tab():
                         html.Div([
                             html.Label("Employment Status", className="form-label"),
                             dcc.Dropdown(id="input-employment", options=[
-                                {'label': 'Select status', 'value': ''},
                                 {'label': 'Employed', 'value': 'Employed'},
                                 {'label': 'Unemployed', 'value': 'Unemployed'},
                                 {'label': 'Retired', 'value': 'Retired'},
